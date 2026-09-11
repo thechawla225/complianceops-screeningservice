@@ -1,1 +1,2 @@
 Screening Service for Compliance Ops
+This service will recieve Transactions from the transaction service which will be compared against a screening checklist. Based on the details, a response will be generated for screening 
