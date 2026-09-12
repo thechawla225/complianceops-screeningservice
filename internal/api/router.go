@@ -1,11 +1,14 @@
 package api
  
-import "net/http"
-
-//defining the two routers we will be using in this service
-func NewRouter() *http.ServeMux {
+import (
+	"net/http"
+	"${MODULE}/internal/screening"
+)
+ 
+//Defining the Endpoitns for this service
+func NewRouter(engine *screening.Engine) *http.ServeMux {
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /healthz", healthz)
-	mux.HandleFunc("POST /screen", screen)
+	mux.HandleFunc("GET /healthz", healthzHandler(engine))
+	mux.HandleFunc("POST /screen", screenHandler(engine))
 	return mux
 }

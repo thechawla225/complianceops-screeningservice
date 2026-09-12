@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"net/http"
 	"strings"
- 
 	"${MODULE}/internal/screening"
 )
  
@@ -17,7 +16,7 @@ type screenRequest struct {
 
 func screen(w http.ResponseWriter, r *http.Request) {
 	var req screenRequest
-	
+
 //Using the errors from errors.go to write the response
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 		writeError(w, http.StatusBadRequest, "validation_error",
