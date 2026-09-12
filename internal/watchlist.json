@@ -1,0 +1,72 @@
+[
+  {
+    "uid": 40221,
+    "name": "MERIDIAN STEEL & METALS FZE",
+    "type": "entity",
+    "programs": ["IRAN"],
+    "alternateNames": ["MERIDIAN STEEL FZE", "MSM TRADING FZE"]
+  },
+  {
+    "uid": 40347,
+    "name": "NORTHWIND TRADING CONSORTIUM",
+    "type": "entity",
+    "programs": ["RUSSIA-EO14024"],
+    "alternateNames": ["NORTHWIND TRADING CO", "NTC GROUP"]
+  },
+  {
+    "uid": 40512,
+    "name": "ZEPHYR MARITIME HOLDINGS LTD",
+    "type": "entity",
+    "programs": ["DPRK3"],
+    "alternateNames": ["ZEPHYR MARITIME", "ZMH LTD"]
+  },
+  {
+    "uid": 40598,
+    "name": "KARIMOV, Ilyas Rustamovich",
+    "type": "individual",
+    "programs": ["SDGT"],
+    "alternateNames": ["KARIMOV, Ilyas", "AL-KARIMI, Ilyas"]
+  },
+  {
+    "uid": 40663,
+    "name": "SILVERLINE LOGISTICS GROUP LLC",
+    "type": "entity",
+    "programs": ["VENEZUELA"],
+    "alternateNames": ["SILVERLINE LOGISTICS", "SLG LLC"]
+  },
+  {
+    "uid": 40714,
+    "name": "CRIMSON HORIZON VENTURES LTD",
+    "type": "entity",
+    "programs": ["CUBA"],
+    "alternateNames": ["CRIMSON HORIZON"]
+  },
+  {
+    "uid": 40789,
+    "name": "FALCON RIDGE COMMODITIES DMCC",
+    "type": "entity",
+    "programs": ["NPWMD"],
+    "alternateNames": ["FALCON RIDGE"]
+  },
+  {
+    "uid": 40855,
+    "name": "OBSIDIAN BAY SHIPPING CO",
+    "type": "entity",
+    "programs": ["UKRAINE-EO13662"],
+    "alternateNames": ["OBSIDIAN BAY SHIPPING", "OBS CO"]
+  },
+  {
+    "uid": 40902,
+    "name": "ASHGROVE PETROCHEMICAL TRADING FZE",
+    "type": "entity",
+    "programs": ["IRAN"],
+    "alternateNames": ["ASHGROVE PETROCHEMICAL", "APT FZE"]
+  },
+  {
+    "uid": 40977,
+    "name": "UMAROV, Bakhtiyor Nazarovich",
+    "type": "individual",
+    "programs": ["SDGT"],
+    "alternateNames": ["UMAROV, Bakhtiyor"]
+  }
+]
