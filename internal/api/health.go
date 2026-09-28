@@ -1,11 +1,11 @@
 package api
- 
+
 import (
+	"complianceops-screening/internal/screening"
 	"net/http"
-	"${MODULE}/internal/screening"
 )
- 
-//Added Logic in Health file to actually validate of REDIS is functional
+
+// Added Logic in Health file to actually validate of REDIS is functional
 func healthzHandler(engine *screening.Engine) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := engine.Redis.Ping(r.Context()).Err(); err != nil {

@@ -1,7 +1,7 @@
 package api
 
 import (
-	"${MODULE}/internal/screening"
+	"complianceops-screening/internal/screening"
 	"context"
 	"encoding/json"
 	"net/http"

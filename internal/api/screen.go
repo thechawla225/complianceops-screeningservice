@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"strings"
-	"${MODULE}/internal/screening"
+	"complianceops-screening/internal/screening"
 )
  
 // Defining what a transaction object should look like for this service

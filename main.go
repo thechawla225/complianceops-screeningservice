@@ -1,8 +1,8 @@
 package main
 
 import (
-	"${MODULE}/internal/api"
-	"${MODULE}/internal/screening"
+	"complianceops-screening/internal/api"
+	"complianceops-screening/internal/screening"
 	"context"
 	"log"
 	"net/http"
