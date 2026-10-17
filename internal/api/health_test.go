@@ -18,9 +18,9 @@ func newTestRouter(t *testing.T) *http.ServeMux {
 	rdb := redis.NewClient(&redis.Options{Addr: mr.Addr()})
 
 	entry := screening.Entry{
-		UID: 40347, Name: "RANDOM RUSSIAN COMPANY", Type: "entity",
+		UID: 40347, Name: "NORTHWIND TRADING CONSORTIUM", Type: "entity",
 		Programs:       []string{"RUSSIA-EO14024"},
-		AlternateNames: []string{"RANDOM RUSSIAN CO", "RRC GROUP"},
+		AlternateNames: []string{"NORTHWIND TRADING CO", "NTC GROUP"},
 	}
 	encoded, err := json.Marshal(entry)
 	if err != nil {
