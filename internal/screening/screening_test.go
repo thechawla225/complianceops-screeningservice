@@ -43,6 +43,15 @@ func newTestEngine(t *testing.T) *Engine {
 	return NewEngine(rdb)
 }
 
+func TestVerdict_EmptyWatchlistFailsClosed(t *testing.T) {
+	mr := miniredis.RunT(t)
+	engine := NewEngine(redis.NewClient(&redis.Options{Addr: mr.Addr()}))
+
+	if _, err := engine.Verdict(context.Background(), "NORTHWIND TRADING CONSORTIUM", "Acme Exports Ltd"); err == nil {
+		t.Fatal("expected an error for an empty watchlist, got a verdict")
+	}
+}
+
 func TestVerdict(t *testing.T) {
 	engine := newTestEngine(t)
 
