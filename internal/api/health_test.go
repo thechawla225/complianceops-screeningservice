@@ -42,3 +42,15 @@ func TestHealthz_OkWhenRedisReachable(t *testing.T) {
 		t.Fatalf("expected 200, got %d", rec.Code)
 	}
 }
+
+func TestHealthz_UnavailableWhenWatchlistMissing(t *testing.T) {
+	mr := miniredis.RunT(t)
+	mux := NewRouter(screening.NewEngine(redis.NewClient(&redis.Options{Addr: mr.Addr()})))
+	req := httptest.NewRequest(http.MethodGet, "/healthz", nil)
+	rec := httptest.NewRecorder()
+	mux.ServeHTTP(rec, req)
+
+	if rec.Code != http.StatusServiceUnavailable {
+		t.Fatalf("expected 503, got %d", rec.Code)
+	}
+}

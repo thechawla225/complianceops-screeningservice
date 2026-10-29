@@ -14,6 +14,10 @@ func (e *Engine) Verdict(ctx context.Context, debtorName, creditorName string) (
 	if err != nil {
 		return Result{}, fmt.Errorf("fetching watchlist: %w", err)
 	}
+	// Fail closed: an empty watchlist (e.g. Redis restarted without data) must never clear a payment
+	if len(entries) == 0 {
+		return Result{}, fmt.Errorf("watchlist not loaded")
+	}
 
 	ref := newScreeningRef()
 
