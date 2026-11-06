@@ -31,6 +31,7 @@ func screenHandler(engine *screening.Engine) http.HandlerFunc {
 			writeError(w, http.StatusInternalServerError, "screening_error", "failed to screen against watchlist")
 			return
 		}
+		screeningVerdicts.WithLabelValues(result.Verdict).Inc()
 		writeJSON(w, http.StatusOK, result)
 	}
 }
