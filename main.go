@@ -33,7 +33,7 @@ func main() {
 	mux := api.NewRouter(engine)
 
 	log.Println("screening service listening on :8002")
-	if err := http.ListenAndServe(":8002", mux); err != nil {
+	if err := http.ListenAndServe(":8002", api.Instrument(mux)); err != nil {
 		log.Fatal(err)
 	}
 }
